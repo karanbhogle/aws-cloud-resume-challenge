@@ -32,3 +32,16 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+
+document.getElementById("profileVisits").innerHTML = "Unavailable";
+            
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    document.getElementById("profileVisits").innerHTML = this.responseText;
+  }
+};
+
+xhttp.open("GET", "https://2ihnq4vblccgf7mwu5ibcm3cdi0chhoy.lambda-url.us-east-1.on.aws/", true);
+xhttp.send();
