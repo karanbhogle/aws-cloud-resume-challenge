@@ -6,7 +6,7 @@ This is my attempt at the AWS Cloud Resume Challenge, showcasing my journey in b
 
 
 ## Architecture
-![Karan's AWS Cloud Resume Challenge Architecture](https://github.com/karanbhogle/aws-cloud-resume-challenge/blob/main/resume-static-website/assets/img/aws-crc-arch.png?raw=true)
+![Karan's AWS Cloud Resume Challenge Architecture]([https://github.com/karanbhogle/aws-cloud-resume-challenge/blob/main/resume-static-website/assets/img/aws-crc-arch.png?raw=true](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*yBm16V2xAPsPVxRCFpT6GQ.jpeg))
 
 **Services Used:**
 
