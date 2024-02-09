@@ -137,10 +137,6 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   color: #343a40;
 }
 
-.nav-item {
-  width: 180px;
-  height: 180px;
-}
 
 /*
 CONNECT WITH ME CARDS CSS
@@ -152,8 +148,8 @@ CONNECT WITH ME CARDS CSS
   padding: 0;
 }
 
-.card {
-  width: 2080px;
+.card1 {
+  width: 280px;
   height: 120px;
   position: relative;
   border-radius: 10px;
@@ -165,19 +161,23 @@ CONNECT WITH ME CARDS CSS
   text-align: center;
   color: black;
   text-decoration: none;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Added background-color transition */
   margin: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.404); /* Added light black tint */
 }
 
-.card:hover {
+.card1:hover {
   transform: scale(1.05);
+  background-color: transparent; /* Remove light black tint on hover */
 }
 
-.card h3 {
+.card1 h3 {
   margin: 0;
 }
 
-.card::before {
+.card1::before {
   content: "";
   position: absolute;
   top: 0;
@@ -189,6 +189,13 @@ CONNECT WITH ME CARDS CSS
   background-repeat: no-repeat;
   filter: blur(3px);
   z-index: -1;
+  transition: filter 0.3s ease; /* Added transition */
+  background-color: rgba(0, 0, 0, 0.958); /* Added transparent black background */
+}
+
+.card1:hover::before {
+  filter: blur(0px); /* Removed blur on hover */
+  background-color: transparent; /* Removed transparent black background on hover */
 }
 
 .linkedin::before {
@@ -205,6 +212,21 @@ CONNECT WITH ME CARDS CSS
 
 .medium::before {
   background-image: url('../assets/img/medium_bg.jpg');
+}
+
+/* Remove underline from <a> tag links */
+.card1 a {
+  text-decoration: none;
+}
+
+.connectLi {
+  color: white;
+  transition: color 0.3s ease; /* Added transition */
+}
+
+.connectLi:hover {
+   /* Set text color on hover */
+  color: #FF9900;
 }
 
 /*
