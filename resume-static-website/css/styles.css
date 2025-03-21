@@ -214,6 +214,10 @@ CONNECT WITH ME CARDS CSS
   background-image: url('../assets/img/medium_bg.jpg');
 }
 
+.yt::before {
+  background-image: url('../assets/img/yt_bg.jpg');
+}
+
 /* Remove underline from <a> tag links */
 .card1 a {
   text-decoration: none;
