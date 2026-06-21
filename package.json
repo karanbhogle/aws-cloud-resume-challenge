@@ -1,0 +1,25 @@
+{
+  "name": "repository",
+  "version": "1.0.0",
+  "description": "The Cloud Resume Challenge, by [Forrest Brazeal](https://forrestbrazeal.com/), is a hands-on project designed to help you bridge the gap from cloud certification to cloud job. It is a challenge to help people to prepare for a job in the cloud industry.",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server resume-static-website",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karanbhogle/aws-cloud-resume-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/karanbhogle/aws-cloud-resume-challenge/issues"
+  },
+  "homepage": "https://github.com/karanbhogle/aws-cloud-resume-challenge#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

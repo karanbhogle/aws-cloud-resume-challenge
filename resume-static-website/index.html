@@ -1,232 +1,498 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Karan Bhogle | Resume</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">Bhogle Karan</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="..." /></span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About Me</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#connect">Connect with Me</a></li>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Karan Bhogle | Resume</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico?v=2" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet"
+        type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- Modern visual makeover styles -->
+    <link href="css/makeover.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Main Layout Wrapper -->
+    <div class="resume-main-wrapper">
+
+        <!-- 1. Left Navbar (Narrow) -->
+        <nav class="left-navbar" id="sideNav">
+            <a class="navbar-logo" href="#about"></a>
+
+            <ul class="left-navbar-menu">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger active" href="#about" data-label="About me" title="About me">
+                        <i class="fa-solid fa-user"></i>
+                        <span class="nav-text">About me</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#experience" data-label="EXPERIENCE" title="EXPERIENCE">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <span class="nav-text">EXPERIENCE</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#education" data-label="EDUCATION" title="EDUCATION">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span class="nav-text">EDUCATION</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#skills" data-label="SKILLS" title="SKILLS">
+                        <i class="fa-solid fa-gears"></i>
+                        <span class="nav-text">SKILLS</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#interests" data-label="INTERESTS" title="INTERESTS">
+                        <i class="fa-solid fa-heart"></i>
+                        <span class="nav-text">INTERESTS</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#connect" data-label="CONNECT WITH ME"
+                        title="CONNECT WITH ME">
+                        <i class="fa-solid fa-share-nodes"></i>
+                        <span class="nav-text">CONNECT WITH ME</span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Bottom items: Visitor count -->
+            <div class="text-center">
+                <span
+                    style="color: rgba(255,255,255,0.4); font-size: 0.65rem; display: block; text-transform: uppercase; margin-bottom: 3px; letter-spacing: 0.05em;">Profile
+                    Visits</span>
+                <span id="profileVisits" style="color: white; font-weight: bold;"></span>
+            </div>
+        </nav>
+
+        <!-- Container for the Centered Card Area -->
+        <div class="card-area-wrapper">
+            <div class="resume-content-card">
+
+                <!-- 2. Profile Card Visual Pane -->
+                <div class="profile-card" style="background-image: url('assets/img/profile.jpg');">
+            <div class="profile-card-content">
+                <div class="profile-card-name"><span class="first-name">Karan</span> <span class="last-name">Bhogle</span></div>
+                <div class="profile-card-title">Java AWS Backend Engineer</div>
+
+                <ul class="profile-card-socials">
+                    <li>
+                        <a href="https://www.linkedin.com/in/karan-bhogle" target="_blank" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/karanbhogle" target="_blank" title="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.credly.com/users/karan-bhogle/badges" target="_blank" title="Credly">
+                            <i class="fa-solid fa-award"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://medium.com/@karanbhogle" target="_blank" title="Medium">
+                            <i class="fa-brands fa-medium"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@karanbhogle4245" target="_blank" title="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
-            <span style="color: white;">Profile Visits</span>
-            <span id="profileVisits" style="color: white; font-weight: bold;"></span>
-        </nav>
-        <!-- Page Content-->
-        <div class="container-fluid p-0">
-            <!-- About-->
-            <section class="resume-section" id="about">
-                <div class="resume-section-content">
-                    <h1 class="mb-0">
-                        Karan
-                        <span class="text-primary">Bhogle</span>
-                    </h1>
-                    <div class="subheading mb-5">
-                        <a href="mailto:name@email.com">karanbhogle@mail.com</a><br>
-                        Ahmedabad, GJ, India
-                    </div>
-                    <p class="lead mb-5">I'm an <b>AWS Certified Professional</b> with a passion for cloud solutions and an enthusiasm for building robust <b>software applications</b>. My expertise lies around <b>Java/J2EE, Spring Boot, SQL, REST API development, Microservices architecture and in creating cloud and container based solutions. </b>.
-
-                        I thrive on collaborating with others and consider myself a dedicated <b>team player</b>. My goal is to contribute my skills and knowledge to help drive innovation and create solutions that make a positive impact.</p>
-                    <div class="social-icons">
-                        <div data-iframe-width="120" data-iframe-height="200" data-share-badge-id="946d0742-ed7d-4986-896f-69d8e61d383d" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-                        <div data-iframe-width="120" data-iframe-height="200" data-share-badge-id="23fddbdf-756f-4f2c-a525-7a74ac642cdc" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-                        <div data-iframe-width="120" data-iframe-height="200" data-share-badge-id="df5c9bab-86a9-4efa-9d05-0a515c07b64a" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-                        <div data-iframe-width="120" data-iframe-height="200" data-share-badge-id="4e42ae5a-b51f-40ac-88c0-ec36a96ea9db" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-                        <div data-iframe-width="120" data-iframe-height="200" data-share-badge-id="09baec10-57b6-4d7f-ab56-07e88584376e" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-                        <div data-iframe-width="120" data-iframe-height="200" data-share-badge-id="868e4c06-fda7-42a1-9be1-49793a8f90f7" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-                        <div data-iframe-width="120" data-iframe-height="200" data-share-badge-id="f0204c82-3cf8-4814-963b-10b1bee0e662" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-                        <div data-iframe-width="120" data-iframe-height="200" data-share-badge-id="990cebb6-a144-4dca-99d9-c3850a0dbeaa" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-                        <div data-iframe-width="120" data-iframe-height="200" data-share-badge-id="41372d7e-5fbc-493f-add2-adce4a502bf6" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-                        <div data-iframe-width="120" data-iframe-height="200" data-share-badge-id="92c8d17e-d5bc-4fc5-a134-97294d80c5d1" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Experience-->
-            <section class="resume-section" id="experience">
-                <div class="resume-section-content">
-                    <h2 class="text-primary">Experience</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Systems Engineer</h3>
-                            <div class="subheading mb-3">Tata Consultancy Services</div>
-                            <p>Worked as a Java Backend Developer and L3 Engineer. Skills - Java/J2EE, SQL, SPARQL, Spring Boot, Microservices, REST APIs, Linux</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">April 2021 - Present</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Android App Developer</h3>
-                            <div class="subheading mb-3">
-                                Raidlayer Internet P Limited</div>
-                            <p> Developed Android applications - <a href="https://play.google.com/store/apps/details?id=com.cocotel.app&hl=en&gl=US&pli=1" target="_blank">Cocotel</a>, 
-                                <a href="https://play.google.com/store/search?q=lexcru&c=apps&hl=en&gl=US" target="_blank">Lexcru</a>, 
-                                 and <a href="https://play.google.com/store/apps/details?id=com.jeweldeal.charbhuja&hl=en&gl=US" target="_blank">Charbhuja Jewels</a>. Used popular SDKs(Google Maps, Vuforia, Stripe, etc.) along with popular APIs(Firebase,
-                                YouTube, Facebook, etc.)</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Sep 2020 - Mar 2021</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Web Developer Intern</h3>
-                            <div class="subheading mb-3">Cybercom Creation</div>
-                            <p>Worked on an e-commerce project. I received training in HTML, CSS, Core PHP, Javascript, Ajax and MySQL.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Jan 2020 - Jul 2020</span></div>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Education-->
-            <section class="resume-section" id="education">
-                <div class="resume-section-content">
-                    <h2 class="text-primary">Education</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">GLS University</h3>
-                            <div class="subheading mb-3">Master of Computer Application</div>
-                            <div>GLS FACULTY
-                                OF COMPUTER
-                                TECHNOLOGY</div>
-                            <p>CGPA: 8.6</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">June 2018 - May 2020</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">GLS University</h3>
-                            <div class="subheading mb-3">Bachelor of Computer Application</div>
-                            <div>GLS INSTITUTE
-                                OF COMPUTER
-                                APPLICATION</div>
-                            <p>CGPA: 8.6</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">June 2015 - May 2018</span></div>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Skills-->
-            <section class="resume-section" id="skills">
-                <div class="resume-section-content">
-                    <h2 class="text-primary">Skills</h2>
-                    <div class="subheading mb-3">Programming Languages & Tools</div>
-                    <ul class="list-inline dev-icons">
-                        <li class="list-inline-item"><i class="fa-brands fa-java">Java</i></li>
-                        <li class="list-inline-item"><i class="fa-brands fa-aws"></i></li>
-                        <li class="list-inline-item"><i class="fa-brands fa-python"></i></li>
-                        <li class="list-inline-item"><i class="fa-brands fa-android"></i></li>
-                        <li class="list-inline-item"><i class="fa-brands fa-php"></i></li>
-                        <li class="list-inline-item"><i class="fa-solid fa-database"></i></li>
-                        <li class="list-inline-item"><i class="fa-solid fa-cloud"></i></li>
-                    </ul>
-                    <div class="subheading mb-3">Workflow</div>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Familiarity with Java-based frameworks like <b>Spring Boot for creating microservices</b>.
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Proficiency in developing <b>REST APIs</b>, unit tests and command-line operations on <b>Linux systems</b>.
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Good working knowledge of <b>caching, authentication, containerization and distributed systems</b>
-                             and implementing solutions on <b>AWS Cloud & IBM Cloud</b>.
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Good working knowledge of <b>messaging and data streaming services</b> like <b>Apache Kafka, Amazon SQS, Amazon SNS and Amazon Kinesis</b>.
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Ability to work <b>collaboratively</b> in a team and <b>communicate</b> technical concepts.
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Agile Development & Scrum
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Interests-->
-            <section class="resume-section" id="interests">
-                <div class="resume-section-content">
-                    <h2 class="text-primary">Interests</h2>
-                    <p>Beyond my professional endeavors in software development, my diverse personal interests provide a glimpse into my character. As a <b>cinema enthusiast</b>, I find joy in exploring TV series and films that delve into <b>characters making pivotal life decisions</b>, showcasing authentic <b>human tendencies</b>. Notable favorites include <b>Breaking Bad, Better Call Saul, Death Note, Attack on Titan, Parasite, Maze Runner, Snow Piercer, Game of Thrones, Squid Game, Westworld and many more</b>.</p>
-
-                    <p>During my downtime, I used to indulge in the thrill of playing <b>Call of Duty, NFS and GTA</b> games as a dynamic way to unwind. Recently, I've embraced <b>long-distance motorcycling</b>, finding tranquility on the open road. Seeking balance and well-being, I've incorporated amateur <b>cycling and dancing</b> into my routine.</p>
-
-                    <p>My passion for cinema extends to <b>capturing moments</b>, allowing me to experiment and deepen my understanding of the art. Checkout my <a href="https://www.youtube.com/@karanbhogle4245" target="_blank">YouTube channel</a>. Additionally, I am an avid reader, focusing on self-improvement books rooted in <b>stoicism</b>, reflecting my belief in continuous personal and professional growth.</p>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Connect With Me-->
-            <section class="resume-section" id="connect">
-                <div class="resume-section-content">
-                    <h2 class="text-primary">Connect with Me</h2>
-                    <ul class="connect-list">
-                        <li class="card1 linkedin">
-                            <a href="https://www.linkedin.com/in/karan-bhogle" target="_blank">
-                                <h3 class="connectLi">LinkedIn</h3>
-                            </a>
-                        </li>
-                        <li class="card1 github">
-                            <a href="https://github.com/karanbhogle" target="_blank">
-                                <h3 class="connectLi">GitHub</h3>
-                            </a>
-                        </li>
-                        <li class="card1 credly">
-                            <a href="https://www.credly.com/users/karan-bhogle/badges" target="_blank">
-                                <h3 class="connectLi">Credly</h3>
-                            </a>
-                        </li>
-                        <li class="card1 medium">
-                            <a href="https://medium.com/@karanbhogle" target="_blank">
-                                <h3 class="connectLi">Medium</h3>
-                            </a>
-                        </li>
-                        <li class="card1 yt">
-                            <a href="https://www.youtube.com/@karanbhogle4245" target="_blank">
-                                <h3 class="connectLi">YouTube</h3>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
         </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        
-    </body>
+
+        <!-- 3. Right Scrollable Content Column -->
+        <div class="content-scrollable-container">
+            <div class="content-scrollable">
+
+                <!-- About -->
+                <section class="resume-section reveal-on-scroll" id="about">
+                    <div class="resume-section-content">
+                        <h1 class="mb-0 about-name-heading">
+                            <span class="first-name">Karan</span>
+                            <span class="last-name">Bhogle</span>
+                        </h1>
+                        <div class="subheading mb-5">
+                            <a href="mailto:karanbhogle@mail.com">karanbhogle@mail.com</a><br>
+                            Santiago de Querétaro, Mexico
+                        </div>
+                        <p class="lead mb-5">I'm an <b>AWS Certified Professional</b> with a passion for cloud solutions
+                            and an enthusiasm for building robust <b>software applications</b>. My expertise lies around
+                            <b>Java, Spring Boot, SQL, REST API development, Microservices architecture and in creating
+                                cloud and container based solutions. </b>
+
+                            I thrive on collaborating with others and consider myself a dedicated <b>team player</b>. My
+                            goal is to contribute my skills and knowledge to help drive innovation and create solutions
+                            that make a positive impact.
+                        </p>
+                        <div class="certificates-frame">
+                            <div class="social-icons">
+                                <div data-iframe-width="120" data-iframe-height="240"
+                                    data-share-badge-id="946d0742-ed7d-4986-896f-69d8e61d383d"
+                                    data-share-badge-host="https://www.credly.com"></div>
+                                <script type="text/javascript" async
+                                    src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                                <div data-iframe-width="120" data-iframe-height="240"
+                                    data-share-badge-id="23fddbdf-756f-4f2c-a525-7a74ac642cdc"
+                                    data-share-badge-host="https://www.credly.com"></div>
+                                <script type="text/javascript" async
+                                    src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                                <div data-iframe-width="120" data-iframe-height="240"
+                                    data-share-badge-id="df5c9bab-86a9-4efa-9d05-0a515c07b64a"
+                                    data-share-badge-host="https://www.credly.com"></div>
+                                <script type="text/javascript" async
+                                    src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                                <div data-iframe-width="120" data-iframe-height="240"
+                                    data-share-badge-id="4e42ae5a-b51f-40ac-88c0-ec36a96ea9db"
+                                    data-share-badge-host="https://www.credly.com"></div>
+                                <script type="text/javascript" async
+                                    src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                                <div data-iframe-width="120" data-iframe-height="240"
+                                    data-share-badge-id="09baec10-57b6-4d7f-ab56-07e88584376e"
+                                    data-share-badge-host="https://www.credly.com"></div>
+                                <script type="text/javascript" async
+                                    src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                                <div data-iframe-width="120" data-iframe-height="240"
+                                    data-share-badge-id="868e4c06-fda7-42a1-9be1-49793a8f90f7"
+                                    data-share-badge-host="https://www.credly.com"></div>
+                                <script type="text/javascript" async
+                                    src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                                <div data-iframe-width="120" data-iframe-height="240"
+                                    data-share-badge-id="f0204c82-3cf8-4814-963b-10b1bee0e662"
+                                    data-share-badge-host="https://www.credly.com"></div>
+                                <script type="text/javascript" async
+                                    src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                                <div data-iframe-width="120" data-iframe-height="240"
+                                    data-share-badge-id="990cebb6-a144-4dca-99d9-c3850a0dbeaa"
+                                    data-share-badge-host="https://www.credly.com"></div>
+                                <script type="text/javascript" async
+                                    src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                                <div data-iframe-width="120" data-iframe-height="240"
+                                    data-share-badge-id="41372d7e-5fbc-493f-add2-adce4a502bf6"
+                                    data-share-badge-host="https://www.credly.com"></div>
+                                <script type="text/javascript" async
+                                    src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                                <div data-iframe-width="120" data-iframe-height="240"
+                                    data-share-badge-id="92c8d17e-d5bc-4fc5-a134-97294d80c5d1"
+                                    data-share-badge-host="https://www.credly.com"></div>
+                                <script type="text/javascript" async
+                                    src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Experience -->
+                <section class="resume-section reveal-on-scroll" id="experience">
+                    <div class="resume-section-content">
+                        <h2 class="text-primary">Experience</h2>
+
+                        <div class="timeline-container">
+                            <!-- Item 1 -->
+                            <div class="timeline-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                                <div class="flex-grow-1">
+                                    <h3 class="mb-0">Java AWS Backend Engineer</h3>
+                                    <div class="subheading mb-2">Tata Consultancy Services</div>
+                                    <div class="text-muted mb-3"><i class="fa-solid fa-location-dot me-1"></i> Santiago
+                                        de Querétaro, Mexico & Gandhinagar, India</div>
+                                    <ul class="timeline-bullets">
+                                        <li>Contributed to development and maintenance of 30+ <b>distributed
+                                                microservices</b> within a centralized orchestration layer (<b>ESB</b>)
+                                            to bridge data silos across 5 core domains (Subscriber, Payment, Device,
+                                            Supply Chain, and Analytics).</li>
+                                        <li>Built high-throughput integration pipelines using contract-first design
+                                            principles, implementing API contracts in <b>Smithy specification</b> and
+                                            <b>OpenAPI/Swagger</b> templates for synchronous <b>REST endpoints</b> and
+                                            asynchronous <b>Apache Kafka</b> and <b>AWS SNS/SQS</b> event streams.
+                                        </li>
+                                        <li>Implemented data consolidation logic to aggregate multi-domain payloads from
+                                            disparate upstream teams, transforming and forwarding unified data streams
+                                            to the Business Intelligence (BI) team for analytical services.</li>
+                                        <li>Integrated a robust cross-service validation layer in collaboration with the
+                                            Enterprise Security team, enforcing <b>OAuth2</b>, <b>Mutual Authentication
+                                                (mTLS/MA)</b>, and <b>API Gateway tokens</b> to securely validate client
+                                            requests.</li>
+                                        <li>Executed an enterprise security remediation initiative utilizing <b>Snyk</b>
+                                            to analyze organizational repositories, achieving a 100% resolution rate of
+                                            critical vulnerabilities across the codebase by systematically refactoring
+                                            legacy logic and upgrading foundational dependencies.</li>
+                                        <li>Reduced overall application dependency and transitive dependency
+                                            vulnerabilities by 80%, carefully managing dependency trees to guarantee
+                                            backward compatibility and runtime stability across all moving parts.</li>
+                                        <li>Spearheaded the technical onboarding of new engineers, accelerating
+                                            time-to-productivity by training them on the end-to-end
+                                            development-to-deployment lifecycle and data governance policies for
+                                            cross-domain sensitive data.</li>
+                                        <li>Served as the primary Technical Point of Contact (<b>POC</b>) for production
+                                            support, driving cross-functional troubleshooting and incident response
+                                            whenever integration issues arose across system domains.</li>
+                                        <li>Established and maintained an enterprise engineering knowledge base,
+                                            authoring comprehensive documentation for initial local environment setups
+                                            and runbooks for troubleshooting complex runtime system errors.</li>
+                                        <li>Modernized legacy monolithic systems into distributed architectures using
+                                            <b>Spring Boot</b>, performing extensive test suites including <b>JUnit</b>,
+                                            functional, system, and integration testing to resolve production customer
+                                            escalations.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <span class="timeline-date text-primary">April 2021 -- Present</span>
+                                </div>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="timeline-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                                <div class="flex-grow-1">
+                                    <h3 class="mb-0">Android App Developer</h3>
+                                    <div class="subheading mb-2">Raidlayer Internet P Limited</div>
+                                    <div class="text-muted mb-3"><i class="fa-solid fa-location-dot me-1"></i>
+                                        Ahmedabad, India</div>
+                                    <ul class="timeline-bullets">
+                                        <li>Developed and launched native Android applications (<a
+                                                href="https://play.google.com/store/apps/details?id=com.cocotel.app&hl=en&gl=US&pli=1"
+                                                target="_blank"><b>Cocotel</b></a>, <a
+                                                href="https://play.google.com/store/search?q=lexcru&c=apps&hl=en&gl=US"
+                                                target="_blank"><b>Lexcru</b></a>, and <a
+                                                href="https://play.google.com/store/apps/details?id=com.jeweldeal.charbhuja&hl=en&gl=US&pli=1"
+                                                target="_blank"><b>Charbhuja Jewels</b></a>) utilizing <b>Java</b> and
+                                            integrated third-party payment architectures via <b>Stripe</b>.</li>
+                                        <li>Implemented complex location-based services and features leveraging
+                                            <b>Google Maps SDK</b> alongside real-time data integrations using the
+                                            <b>Firebase suite</b>.
+                                        </li>
+                                        <li>Leveraged specialized APIs and multimedia components including <b>YouTube
+                                                API</b>, <b>Facebook SDK</b>, and <b>Vuforia AR kit</b> to maximize user
+                                            interactivity.</li>
+                                    </ul>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <span class="timeline-date text-primary">September 2020 -- March 2021</span>
+                                </div>
+                            </div>
+
+                            <!-- Item 3 -->
+                            <div class="timeline-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                                <div class="flex-grow-1">
+                                    <h3 class="mb-0">Web Development Intern</h3>
+                                    <div class="subheading mb-2">Cybercom Creation</div>
+                                    <div class="text-muted mb-3"><i class="fa-solid fa-location-dot me-1"></i>
+                                        Ahmedabad, India</div>
+                                    <ul class="timeline-bullets">
+                                        <li>Architected and developed a basic configurable <b>PHP framework</b>
+                                            optimized for modular, rapid <b>e-Commerce website</b> creation.</li>
+                                        <li>Built and optimized full-stack e-Commerce features utilizing <b>HTML</b>,
+                                            <b>CSS</b>, <b>Core PHP</b>, <b>JavaScript</b>, <b>Ajax</b> asynchronous
+                                            requests, and <b>MySQL</b> relational schemas.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <span class="timeline-date text-primary">January 2020 -- August 2020</span>
+                                </div>
+                            </div>
+
+                            <!-- Item 4 (Personal Projects) -->
+                            <div class="timeline-item d-flex flex-column mb-5">
+                                <div class="flex-grow-1">
+                                    <h3 class="mb-0">Personal Projects</h3>
+
+                                    <div class="subheading mt-3 mb-1">
+                                        <a href="https://github.com/karanbhogle/springboot-ecommerce-microservices"
+                                            target="_blank"><b>Spring Boot E-Commerce Microservices Pipeline</b></a>
+                                    </div>
+                                    <div class="text-muted mb-2"><i>Java, Redis, Kafka, Kong Gateway, MongoDB</i></div>
+                                    <ul class="timeline-bullets">
+                                        <li>Designed a distributed multi-module microservice platform implementing Redis
+                                            for responsive caching of product metadata.</li>
+                                        <li>Integrated Kong API Gateway for uniform routing and decoupled a mailing
+                                            notification engine using Apache Kafka message brokers.</li>
+                                    </ul>
+
+                                    <div class="subheading mt-4 mb-1">
+                                        <a href="https://github.com/karanbhogle/aws-cloud-resume-challenge"
+                                            target="_blank"><b>AWS Cloud Resume Challenge</b></a>
+                                    </div>
+                                    <div class="text-muted mb-2"><i>AWS Suite, Route53, CloudFront, Lambda, DynamoDB</i>
+                                    </div>
+                                    <ul class="timeline-bullets">
+                                        <li>Engineered and deployed a highly available, serverless personal portfolio
+                                            website completely built on AWS cloud ecosystem resources.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Education -->
+                <section class="resume-section reveal-on-scroll" id="education">
+                    <div class="resume-section-content">
+                        <h2 class="text-primary">Education</h2>
+
+                        <div class="timeline-container">
+                            <!-- Ed 1 -->
+                            <div class="timeline-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                                <div class="flex-grow-1">
+                                    <h3 class="mb-0">GLS University</h3>
+                                    <div class="subheading mb-2">Master of Computer Applications (MCA) -- CGPA: 8.6 /
+                                        10.0</div>
+                                    <div class="text-muted mb-2"><i class="fa-solid fa-location-dot me-1"></i>
+                                        Ahmedabad, India</div>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <span class="timeline-date text-primary">July 2018 -- June 2020</span>
+                                </div>
+                            </div>
+
+                            <!-- Ed 2 -->
+                            <div class="timeline-item d-flex flex-column flex-md-row justify-content-between">
+                                <div class="flex-grow-1">
+                                    <h3 class="mb-0">GLS University</h3>
+                                    <div class="subheading mb-2">Bachelor of Computer Applications (BCA) -- CGPA: 8.6 /
+                                        10.0</div>
+                                    <div class="text-muted mb-2"><i class="fa-solid fa-location-dot me-1"></i>
+                                        Ahmedabad, India</div>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <span class="timeline-date text-primary">July 2015 -- April 2018</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Skills -->
+                <section class="resume-section reveal-on-scroll" id="skills">
+                    <div class="resume-section-content">
+                        <h2 class="text-primary">Skills</h2>
+                        <div class="subheading mb-3">Programming Languages & Tools</div>
+                        <ul class="list-inline dev-icons">
+                            <li class="list-inline-item"><i class="fa-brands fa-java">Java</i></li>
+                            <li class="list-inline-item"><i class="fa-brands fa-aws"></i></li>
+                            <li class="list-inline-item"><i class="fa-brands fa-python"></i></li>
+                            <li class="list-inline-item"><i class="fa-brands fa-android"></i></li>
+                            <li class="list-inline-item"><i class="fa-brands fa-php"></i></li>
+                            <li class="list-inline-item"><i class="fa-solid fa-database"></i></li>
+                            <li class="list-inline-item"><i class="fa-solid fa-cloud"></i></li>
+                        </ul>
+
+                        <div class="subheading mb-3">Technical Proficiencies</div>
+                        <ul class="fa-ul mb-0">
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                <strong>Languages:</strong> Java, Python, GoLang, SQL, Bash, HTML/CSS, JavaScript
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                <strong>Frameworks & Design:</strong> Spring Boot, Spring Cloud, Enterprise Service Bus
+                                (ESB), RESTful APIs, Smithy Specification, OpenAPI, Swagger
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                <strong>Cloud & Messaging:</strong> AWS (ECS, ECR, SQS, SNS, S3, RDS, DynamoDB, Secrets
+                                Manager, Kinesis Data Streams), Apache Kafka
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                <strong>Tools & Security:</strong> DBeaver, Postman, Docker, Maven, Git, GitHub, Linux,
+                                Redis, Snyk Vulnerability Scanner, OAuth2, Mutual Authentication (mTLS/MA), IntelliJ
+                                IDEA, VSCode
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                <strong>CS Fundamentals:</strong> Object-Oriented Programming (OOPS), Operating Systems
+                                (OS), Relational & Non-Relational Databases (DBMS)
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Interests -->
+                <section class="resume-section reveal-on-scroll" id="interests">
+                    <div class="resume-section-content">
+                        <h2 class="text-primary">Interests</h2>
+                        <p>Beyond my professional endeavors in software development, my diverse personal interests
+                            provide a glimpse into my character. As a <b>cinema enthusiast</b>, I find joy in exploring
+                            TV series and films that delve into <b>characters making pivotal life decisions</b>,
+                            showcasing authentic <b>human tendencies</b>. Notable favorites include <b>Breaking Bad,
+                                Better Call Saul, Death Note, Attack on Titan, Parasite, Maze Runner, Snow Piercer, Game
+                                of Thrones, Squid Game, Westworld and many more</b>.</p>
+
+                        <p>During my downtime, I used to indulge in the thrill of playing <b>Call of Duty, NFS and
+                                GTA</b> games as a dynamic way to unwind. Recently, I've embraced <b>long-distance
+                                motorcycling</b>, finding tranquility on the open road. Seeking balance and well-being,
+                            I've incorporated amateur <b>cycling and dancing</b> into my routine.</p>
+
+                        <p>My passion for cinema extends to <b>capturing moments</b>, allowing me to experiment and
+                            deepen my understanding of the art. Checkout my <a
+                                href="https://www.youtube.com/@karanbhogle4245" target="_blank">YouTube channel</a>.
+                            Additionally, I am an avid reader, focusing on self-improvement books rooted in
+                            <b>stoicism</b>, reflecting my belief in continuous personal and professional growth.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Connect -->
+                <section class="resume-section reveal-on-scroll" id="connect">
+                    <div class="resume-section-content">
+                        <h2 class="text-primary">Connect with Me</h2>
+                        <ul class="connect-list">
+                            <li class="card1 linkedin">
+                                <a href="https://www.linkedin.com/in/karan-bhogle" target="_blank">
+                                    <h3 class="connectLi">LinkedIn</h3>
+                                </a>
+                            </li>
+                            <li class="card1 github">
+                                <a href="https://github.com/karanbhogle" target="_blank">
+                                    <h3 class="connectLi">GitHub</h3>
+                                </a>
+                            </li>
+                            <li class="card1 credly">
+                                <a href="https://www.credly.com/users/karan-bhogle/badges" target="_blank">
+                                    <h3 class="connectLi">Credly</h3>
+                                </a>
+                            </li>
+                            <li class="card1 medium">
+                                <a href="https://medium.com/@karanbhogle" target="_blank">
+                                    <h3 class="connectLi">Medium</h3>
+                                </a>
+                            </li>
+                            <li class="card1 yt">
+                                <a href="https://www.youtube.com/@karanbhogle4245" target="_blank">
+                                    <h3 class="connectLi">YouTube</h3>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+        </div> <!-- resume-content-card -->
+        </div> <!-- card-area-wrapper -->
+
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
 </html>

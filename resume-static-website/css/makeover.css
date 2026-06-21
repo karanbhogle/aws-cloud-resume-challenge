@@ -1,0 +1,1041 @@
+/* 
+ * AWS Cloud Resume Challenge - Renuvo-Inspired Makeover CSS
+ * Accent color: AWS Orange (#ff9900)
+ */
+
+:root {
+  --color-bg: #090b11;
+  --color-bg-darker: #05060b;
+  --color-container-bg: #111625;
+  --color-card-bg: rgba(22, 28, 45, 0.4);
+  --color-card-border: rgba(255, 153, 0, 0.12);
+  --color-card-border-hover: rgba(255, 153, 0, 0.4);
+  --color-text: #ffffff;
+  --color-text-muted: #ffffff;
+  --color-primary: #ff9900;
+  --color-primary-rgb: 255, 153, 0;
+  --color-primary-glow: rgba(255, 153, 0, 0.2);
+  --color-sidebar-bg: #0d101d;
+
+  --font-family-body: 'Muli', system-ui, -apple-system, sans-serif;
+  --font-family-header: 'Saira Extra Condensed', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 153, 0, 0.25);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* Base Body Styles */
+body {
+  background-color: var(--color-bg) !important;
+  color: var(--color-text) !important;
+  font-family: var(--font-family-body);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Layout Wrapper - Expanded Dimensions for Desktop */
+.resume-main-wrapper {
+  width: 100%;
+  max-width: none;
+  height: 100vh;
+  min-height: 100vh;
+  background: none;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: none;
+  border: none;
+  display: flex;
+  position: relative;
+}
+
+/* Card Area Wrapper - Spans remaining screen to the right of navbar */
+.card-area-wrapper {
+  flex: 1;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  /* Carbon fiber style textured background */
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255, 153, 0, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(255, 153, 0, 0.03) 0%, transparent 40%),
+    #090b11 repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.25) 0px, rgba(0, 0, 0, 0.25) 2px, transparent 2px, transparent 10px);
+}
+
+/* Centered Floating Resume Content Card */
+.resume-content-card {
+  width: 96%;
+  max-width: 1400px;
+  height: 92vh;
+  min-height: 720px;
+  background-color: var(--color-container-bg);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8), 0 0 50px rgba(255, 153, 0, 0.05);
+  border: 1px solid rgba(255, 153, 0, 0.08);
+  display: flex;
+  position: relative;
+  container-type: inline-size;
+}
+
+/* Left Sidebar Navigation (Narrow - Adjusted width to fit labels) */
+.left-navbar {
+  flex: 0 0 120px;
+  width: 120px;
+  background-color: var(--color-sidebar-bg);
+  border-right: 1px solid rgba(255, 255, 255, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  z-index: 10;
+}
+
+.navbar-logo {
+  font-family: var(--font-family-header);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 10px var(--color-primary-glow);
+}
+
+.left-navbar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  width: 100%;
+}
+
+.left-navbar-menu .nav-item {
+  width: 100%;
+}
+
+.left-navbar-menu .nav-item .nav-link {
+  color: var(--color-text-muted);
+  font-size: 1.35rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  padding: 0.5rem 0.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+.left-navbar-menu .nav-item .nav-link:hover,
+.left-navbar-menu .nav-item .nav-link.active {
+  color: var(--color-primary) !important;
+  transform: scale(1.08);
+}
+
+/* Nav Label Text Styling - Increased font size by 20% for readability */
+.nav-text {
+  font-family: var(--font-family-header);
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 6px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: inherit;
+  /* Matches active and hover state color transformations */
+  word-wrap: break-word;
+  line-height: 1.25;
+}
+
+/* Hide CSS Tooltips since we have visual labels now */
+.left-navbar-menu .nav-item .nav-link::after {
+  display: none !important;
+}
+
+/* Profile Visual Card Column - Fluid Sizing */
+.profile-card {
+  flex: 0 0 32%;
+  width: 32%;
+  min-width: 340px;
+  max-width: 440px;
+  height: 100%;
+  position: relative;
+  background-size: auto 120%;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-right: 1px solid rgba(255, 255, 255, 0.04);
+  transition: background-size 0.9s cubic-bezier(0.25, 1, 0.35, 1), 
+              background-position 0.9s cubic-bezier(0.25, 1, 0.35, 1);
+}
+
+.profile-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 35%, transparent 75%);
+  z-index: 1;
+  transition: opacity 0.9s cubic-bezier(0.25, 1, 0.35, 1);
+}
+
+.profile-card-content {
+  position: relative;
+  z-index: 2;
+  padding: 2.5rem;
+}
+
+.profile-card-name {
+  font-family: var(--font-family-header);
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.profile-card-name .first-name {
+  color: #fff;
+  display: inline-block;
+  transition: all 0.9s cubic-bezier(0.25, 1, 0.35, 1);
+}
+
+.profile-card-name .last-name {
+  color: var(--color-primary);
+  display: inline-block;
+  transition: all 0.9s cubic-bezier(0.25, 1, 0.35, 1);
+}
+
+.profile-card-title {
+  color: var(--color-primary);
+  font-family: var(--font-family-header);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  transition: all 0.9s cubic-bezier(0.25, 1, 0.35, 1);
+}
+
+.profile-card-socials {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: flex-start;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: all 0.9s cubic-bezier(0.25, 1, 0.35, 1);
+}
+
+.profile-card-socials a {
+  color: var(--color-text-muted);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.profile-card-socials a:hover {
+  color: var(--color-primary);
+  transform: translateY(-3px);
+}
+
+/* Right Content Area (Scrollable with gradient fades) - Fills remaining width */
+.content-scrollable-container {
+  flex: 1 1 auto;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.content-scrollable {
+  height: 100%;
+  overflow-y: auto;
+  padding: 3rem 4.5rem;
+  /* Smooth scrolling */
+  scroll-behavior: smooth;
+}
+
+/* Fading Gradient Overlays (Top and Bottom of Scroll container) */
+.content-scrollable-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to bottom, var(--color-container-bg) 15%, transparent 100%);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.content-scrollable-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to top, var(--color-container-bg) 15%, transparent 100%);
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Typography, details & styles */
+h2 {
+  font-family: var(--font-family-header);
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff !important;
+  margin-bottom: 2rem !important;
+  position: relative;
+  display: inline-block;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 40px;
+  height: 3px;
+  background-color: var(--color-primary);
+  transition: width 0.3s ease;
+}
+
+section:hover h2::after {
+  width: 60px;
+}
+
+h3 {
+  color: #fff !important;
+}
+
+.subheading {
+  font-family: var(--font-family-header);
+  font-size: 1.35rem !important;
+  color: var(--color-primary) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1rem !important;
+}
+
+.lead {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text-muted) !important;
+}
+
+/* Sections spacing */
+.resume-section {
+  padding: 4rem 0 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.resume-section:last-child {
+  border-bottom: none !important;
+  padding-bottom: 6rem !important;
+  /* Extra bottom padding for final scroll fade spacing */
+}
+
+/* Timeline Components */
+.timeline-container {
+  position: relative;
+  padding-left: 1.8rem;
+  border-left: 2px solid rgba(255, 153, 0, 0.12);
+  margin-left: 0.5rem;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.2rem;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  width: 100%;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2.35rem;
+  top: 1.75rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background: var(--color-container-bg);
+  border: 2px solid var(--color-primary);
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-card-border-hover);
+  box-shadow: 0 10px 25px rgba(255, 153, 0, 0.05);
+}
+
+.timeline-item:hover::before {
+  background: var(--color-primary);
+  transform: scale(1.1);
+}
+
+.timeline-date {
+  font-family: var(--font-family-header);
+  font-size: 1rem;
+  color: var(--color-primary) !important;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  background: rgba(255, 153, 0, 0.08);
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Skills badging */
+.dev-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem !important;
+  padding: 0;
+  list-style: none;
+}
+
+.dev-icons i {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-family-header);
+  font-size: 1rem !important;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.dev-icons i::after {
+  font-family: var(--font-family-header);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.dev-icons .fa-java::after {
+  content: '';
+}
+
+.dev-icons .fa-aws::after {
+  content: ' AWS';
+}
+
+.dev-icons .fa-python::after {
+  content: ' Python';
+}
+
+.dev-icons .fa-android::after {
+  content: ' Android';
+}
+
+.dev-icons .fa-php::after {
+  content: ' PHP';
+}
+
+.dev-icons .fa-database::after {
+  content: ' SQL & Database';
+}
+
+.dev-icons .fa-cloud::after {
+  content: ' Cloud Computing';
+}
+
+.dev-icons i::before {
+  font-size: 1.4rem;
+  color: var(--color-primary);
+}
+
+.dev-icons i:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+  background: rgba(255, 153, 0, 0.06);
+  box-shadow: 0 5px 15px var(--color-primary-glow);
+}
+
+/* Connect Social Grid */
+.connect-list {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+  gap: 1.2rem;
+  list-style-type: none;
+  padding: 0;
+}
+
+.card1 {
+  width: 100% !important;
+  height: 110px !important;
+  border: 1px solid var(--color-card-border) !important;
+  background-color: rgba(9, 13, 22, 0.5) !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  border-radius: 8px !important;
+  margin: 0 !important;
+}
+
+.card1::before {
+  opacity: 0.2;
+  transition: all 0.3s ease !important;
+  filter: grayscale(90%) blur(1px) !important;
+}
+
+.card1:hover {
+  transform: translateY(-5px) !important;
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 10px 25px var(--color-primary-glow) !important;
+}
+
+.card1:hover::before {
+  opacity: 0.5 !important;
+  filter: grayscale(0%) blur(0px) !important;
+}
+
+.connectLi {
+  font-size: 1.35rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em;
+  transition: opacity 0.6s cubic-bezier(0.25, 1, 0.35, 1) !important;
+}
+
+.card1:hover .connectLi {
+  color: var(--color-primary) !important;
+}
+
+/* Aesthetic Certificates Frame Container */
+.certificates-frame {
+  position: relative;
+  width: 100%;
+  height: 275px;
+  background: rgba(10, 14, 26, 0.45);
+  border: 1px solid rgba(255, 153, 0, 0.15);
+  border-radius: 12px;
+  padding: 1.25rem 1.25rem 0.25rem 1.25rem;
+  margin-top: 1.5rem;
+  overflow: hidden;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Black to gray to transparent fade at the bottom of the frame */
+.certificates-frame::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: linear-gradient(to top, var(--color-container-bg) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Scrollable Horizontal Badges list */
+.certificates-frame .social-icons {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+  /* Buffer to push scrollbar out of view */
+  margin-bottom: -1.2rem;
+  overflow-y: hidden;
+  width: 100%;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Custom styles for individual badge iframes and layout divs */
+.certificates-frame .social-icons div[data-iframe-width] {
+  flex: 0 0 120px;
+  width: 120px;
+  height: 240px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.certificates-frame .social-icons div[data-iframe-width]:hover {
+  transform: translateY(-4px);
+}
+
+/* Color Inversion Filter to make iframe texts white and preserve badge colors */
+.certificates-frame .social-icons iframe {
+  height: 240px !important;
+  filter: invert(1) hue-rotate(180deg) contrast(1.1) brightness(1.2);
+  border-radius: 8px;
+  background: transparent !important;
+}
+
+/* Responsive / Size Adjustable styles for Mobile and Tablets */
+@media (max-width: 1199.98px) {
+  body {
+    padding: 0;
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
+    height: auto !important;
+    display: block !important;
+  }
+
+  * {
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .resume-main-wrapper {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    flex-direction: column;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    background: none;
+    overflow: visible !important;
+  }
+
+  .card-area-wrapper {
+    display: block;
+    height: auto;
+    min-height: none;
+    overflow: visible;
+    background: none;
+  }
+
+  .resume-content-card {
+    width: 100%;
+    height: auto;
+    min-height: none;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    flex-direction: column;
+  }
+
+  #sideNav.left-navbar {
+    width: 100%;
+    flex: 0 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    height: auto;
+    padding: 0.8rem 1.2rem;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: var(--color-sidebar-bg) !important;
+  }
+
+  #sideNav.left-navbar .text-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  #sideNav.left-navbar .text-center span {
+    display: inline-block !important;
+    margin-bottom: 0 !important;
+    white-space: nowrap;
+  }
+
+  .left-navbar-menu {
+    flex-direction: row;
+    gap: 1.2rem;
+    width: auto;
+    justify-content: center;
+  }
+
+  .left-navbar-menu .nav-item {
+    width: auto;
+  }
+
+  .left-navbar-menu .nav-item .nav-link {
+    padding: 0.2rem 0.4rem;
+  }
+
+  .nav-text {
+    display: none !important;
+  }
+  
+  .left-navbar-menu .nav-item .nav-link i {
+    font-size: 1.5rem;
+  }
+
+  .left-navbar-menu .nav-item .nav-link::after {
+    display: none;
+    /* Hide tooltips on mobile */
+  }
+
+  .profile-card {
+    width: 100%;
+    flex: 0 0 auto;
+    height: auto;
+    min-height: 450px;
+    padding-top: 250px;
+    max-height: none;
+    max-width: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .profile-card-content {
+    text-align: center;
+    align-items: center;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .resume-main-wrapper:not(.about-active) .profile-card-content,
+  .resume-main-wrapper:not(.about-active) .profile-card::before {
+    opacity: 0;
+    transform: translateY(30px);
+    pointer-events: none;
+  }
+
+  .about-name-heading {
+    display: none !important;
+  }
+
+  .content-scrollable-container {
+    height: auto;
+    overflow: visible;
+  }
+
+  .content-scrollable-container::before,
+  .content-scrollable-container::after {
+    display: none;
+    /* Disable fixed gradient overlays on mobile stack layout */
+  }
+
+  .certificates-frame .social-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: visible;
+  }
+
+  .content-scrollable {
+    height: auto;
+    overflow-y: visible;
+    padding: 2.5rem 1.5rem;
+  }
+
+  /* Optimize timeline spacing on smaller viewports */
+  .timeline-container {
+    padding-left: 1.2rem;
+  }
+
+  .timeline-item {
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .timeline-item::before {
+    left: -1.75rem;
+    top: 1.5rem;
+  }
+
+  .timeline-date {
+    margin-top: 0.5rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+/* Extra support for larger tablets in portrait view (e.g. iPads) */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .resume-content-card {
+    width: 90%;
+    margin: 2rem auto;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 153, 0, 0.08);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  }
+
+  .content-scrollable {
+    padding: 3rem;
+  }
+}
+
+/* Reveal Scroll Trigger base state */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  filter: blur(1px);
+  transition: opacity 0.6s cubic-bezier(0.215, 0.61, 0.355, 1),
+    transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1),
+    filter 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.reveal-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* Visitor counter text for mobile/desktop */
+#profileVisits {
+  display: inline-block;
+  background: rgba(255, 153, 0, 0.12);
+  border: 1px solid var(--color-primary);
+  padding: 0.15rem 0.6rem;
+  border-radius: 12px;
+  font-family: monospace;
+  color: var(--color-primary) !important;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+/* Timeline bullet points styling for experience items */
+.timeline-bullets {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  color: var(--color-text-muted);
+}
+
+.timeline-bullets li {
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.timeline-bullets li:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-bullets b,
+.timeline-bullets strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.timeline-bullets a {
+  color: var(--color-primary);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255, 153, 0, 0.4);
+  transition: all 0.2s ease;
+}
+
+.timeline-bullets a:hover {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+/* About Name Heading Styling */
+.about-name-heading {
+  font-family: var(--font-family-header);
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1.05;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.about-name-heading .first-name {
+  color: var(--color-primary); /* Accent orange */
+  display: inline-block;
+  transition: all 0.9s cubic-bezier(0.25, 1, 0.35, 1);
+}
+
+.about-name-heading .last-name {
+  color: #fff; /* White */
+  display: inline-block;
+  transition: all 0.9s cubic-bezier(0.25, 1, 0.35, 1);
+}
+
+/* About Active State Styles - Expand layout and Hidden elements initially */
+.about-active .profile-card {
+  background-size: auto 105%;
+  background-position: center 20%;
+}
+
+/* Desktop Only: Text Migration (Flying) Effect on scroll/menu switch */
+@media (min-width: 1200px) {
+
+  .about-active .profile-card::before {
+    opacity: 0;
+  }
+
+  .about-active .profile-card-name .first-name,
+  .about-active .profile-card-name .last-name {
+    opacity: 0;
+    filter: blur(4px);
+  }
+
+  .about-active .profile-card-title {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(4px);
+  }
+
+  .about-active .profile-card-socials {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  /* Profile Card transition settings for background properties */
+  .profile-card {
+    transition: background-size 0.9s cubic-bezier(0.25, 1, 0.35, 1), 
+                background-position 0.9s cubic-bezier(0.25, 1, 0.35, 1);
+  }
+
+  /* Initial State (About Me page active) */
+  .about-active .profile-card-name .first-name {
+    transform: translate(120px, -120px);
+  }
+  .about-active .profile-card-name .last-name {
+    transform: translate(120px, -120px);
+    transition-delay: 0.05s;
+  }
+
+  .about-name-heading .first-name {
+    transform: translate(0, 0);
+    opacity: 1;
+    color: var(--color-primary);
+  }
+  .about-name-heading .last-name {
+    transform: translate(0, 0);
+    opacity: 1;
+    color: #fff;
+    transition-delay: 0.05s;
+  }
+
+  /* Scrolled State (Experience/other pages active) - heading migrations */
+  /* Target text elements in About Section move left/down toward the Profile Card */
+  .resume-main-wrapper:not(.about-active) .about-name-heading .first-name {
+    transform: translate(-120px, 120px);
+    opacity: 0;
+    filter: blur(4px);
+    color: #fff; /* Changes color to White */
+  }
+  
+  .resume-main-wrapper:not(.about-active) .about-name-heading .last-name {
+    transform: translate(-120px, 120px);
+    opacity: 0;
+    filter: blur(4px);
+    color: var(--color-primary); /* Changes color to Accent orange */
+    transition-delay: 0.05s;
+  }
+
+  /* Target text elements in Profile Card move from upper-right offset to normal bottom location */
+  .profile-card-name .first-name {
+    transform: translate(0, 0);
+    opacity: 1;
+    filter: blur(0);
+    color: #fff;
+  }
+  
+  .profile-card-name .last-name {
+    transform: translate(0, 0);
+    opacity: 1;
+    filter: blur(0);
+    color: var(--color-primary);
+    transition-delay: 0.05s;
+  }
+  
+  .profile-card-title {
+    transition-delay: 0.15s;
+  }
+  .profile-card-socials {
+    transition-delay: 0.25s;
+  }
+
+  /* Profile Card Social Icons transition details */
+  .profile-card-socials li {
+    transition: all 0.9s cubic-bezier(0.25, 1, 0.35, 1);
+  }
+  .profile-card-socials li:nth-child(1) { transition-delay: 0s; }
+  .profile-card-socials li:nth-child(2) { transition-delay: 0.05s; }
+  .profile-card-socials li:nth-child(3) { transition-delay: 0.1s; }
+  .profile-card-socials li:nth-child(4) { transition-delay: 0.15s; }
+  .profile-card-socials li:nth-child(5) { transition-delay: 0.2s; }
+
+  .profile-card-socials a {
+    transition: all 0.9s cubic-bezier(0.25, 1, 0.35, 1);
+  }
+
+  /* Connect Active State Animations (desktop only) */
+  .connect-active .profile-card-socials {
+    pointer-events: auto;
+    z-index: 100;
+  }
+
+  .connect-active .profile-card-socials li {
+    /* Translate towards the existing boxes and stay */
+    transform: translate(var(--target-x, 60cqw), var(--target-y, -15vh)) scale(2.5);
+  }
+
+  .connect-active .profile-card-socials a {
+    color: var(--color-text-muted);
+    transition: all 0.3s ease;
+  }
+
+  .connect-active .profile-card-socials a:hover {
+    color: var(--color-primary) !important;
+    transform: translateY(-3px) !important;
+  }
+
+  .connect-active .connect-list .connectLi {
+    opacity: 0 !important;
+  }
+}
