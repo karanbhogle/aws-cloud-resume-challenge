@@ -70,44 +70,23 @@ body {
   position: relative;
 }
 
-/* Card Area Wrapper - Spans remaining screen to the right of navbar */
+/* Card Area Wrapper - Dissolved to create flat 3-column layout */
 .card-area-wrapper {
-  flex: 1;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  /* Carbon fiber style textured background */
-  background:
-    radial-gradient(circle at 20% 30%, rgba(255, 153, 0, 0.03) 0%, transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(255, 153, 0, 0.03) 0%, transparent 40%),
-    #090b11 repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.25) 0px, rgba(0, 0, 0, 0.25) 2px, transparent 2px, transparent 10px);
+  display: contents;
 }
 
-/* Centered Floating Resume Content Card */
+/* Centered Floating Resume Content Card - Dissolved */
 .resume-content-card {
-  width: 96%;
-  max-width: 1400px;
-  height: 92vh;
-  min-height: 720px;
-  background-color: var(--color-container-bg);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8), 0 0 50px rgba(255, 153, 0, 0.05);
-  border: 1px solid rgba(255, 153, 0, 0.08);
-  display: flex;
-  position: relative;
-  container-type: inline-size;
+  display: contents;
 }
 
 /* Left Sidebar Navigation (Narrow - Adjusted width to fit labels) */
 .left-navbar {
-  flex: 0 0 120px;
-  width: 120px;
+  flex: 0 0 10vw;
+  width: 10vw;
   background-color: var(--color-sidebar-bg);
   border-right: 1px solid rgba(255, 255, 255, 0.04);
+  position: static !important;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -183,10 +162,10 @@ body {
 
 /* Profile Visual Card Column - Fluid Sizing */
 .profile-card {
-  flex: 0 0 32%;
-  width: 32%;
-  min-width: 340px;
-  max-width: 440px;
+  flex: 0 0 20vw;
+  width: 20vw;
+  min-width: 0;
+  max-width: none;
   height: 100%;
   position: relative;
   background-size: auto 120%;
@@ -277,13 +256,14 @@ body {
 /* Right Content Area (Scrollable with gradient fades) - Fills remaining width */
 .content-scrollable-container {
   flex: 1 1 auto;
-  height: 100%;
+  height: 100vh;
   position: relative;
   overflow: hidden;
+  background-color: var(--color-container-bg);
 }
 
 .content-scrollable {
-  height: 100%;
+  height: 100vh;
   overflow-y: auto;
   padding: 3rem 4.5rem;
   /* Smooth scrolling */
